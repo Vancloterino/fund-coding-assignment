@@ -1,0 +1,135 @@
+[tool.poetry]
+name = "assignment"
+version = "0.1.0"
+description = ""
+authors = ["ahmaddam <musaahmaddahlan@gic.com.sg>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pytest = "^8.3.5"
+pylint = "^3.3.7"
+black = "^25.1.0"
+polars = "^1.29.0"
+python-dateutil = "^2.9.0.post0"
+pydantic = "^2.11.4"
+pandas = "^2.2.3"
+duckdb = "^1.2.2"
+pytest-cov = "^6.1.1"
+poetry-plugin-export = "^1.9.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.coverage.run]
+source = ["."]
+omit = [
+    "tests/*"
+]
+
+[tool.pylint."MESSAGES CONTROL"]
+# Only show warnings with the listed confidence levels. Leave empty to show
+# all. Valid levels: HIGH, INFERENCE, INFERENCE_FAILURE, UNDEFINED
+confidence = []
+
+# Enable the message, report, category or checker with the given id(s).
+enable = []
+
+# Disable the message, report, category or checker with the given id(s).
+disable = [
+    "R",
+    "abstract-method",
+    "apply-builtin",
+    "arguments-differ",
+    "attribute-defined-outside-init",
+    "backtick",
+    "bad-option-value",
+    "basestring-builtin",
+    "buffer-builtin",
+    "c-extension-no-member",
+    "consider-using-enumerate",
+    "cmp-builtin",
+    "cmp-method",
+    "coerce-builtin",
+    "coerce-method",
+    "delslice-method",
+    "div-method",
+    "eq-without-hash",
+    "execfile-builtin",
+    "file-builtin",
+    "filter-builtin-not-iterating",
+    "fixme",
+    "getslice-method",
+    "global-statement",
+    "hex-method",
+    "idiv-method",
+    "implicit-str-concat",
+    "import-error",
+    "import-self",
+    "import-star-module-level",
+    "input-builtin",
+    "intern-builtin",
+    "invalid-str-codec",
+    "locally-disabled",
+    "long-builtin",
+    "long-suffix",
+    "map-builtin-not-iterating",
+    "misplaced-comparison-constant",
+    "missing-function-docstring",
+    "metaclass-assignment",
+    "next-method-called",
+    "next-method-defined",
+    "no-absolute-import",
+    "no-init",  # added
+    "no-member",
+    "no-name-in-module",
+    "no-self-use",
+    "nonzero-method",
+    "oct-method",
+    "old-division",
+    "old-ne-operator",
+    "old-octal-literal",
+    "old-raise-syntax",
+    "parameter-unpacking",
+    "print-statement",
+    "raising-string",
+    "range-builtin-not-iterating",
+    "raw_input-builtin",
+    "rdiv-method",
+    "reduce-builtin",
+    "relative-import",
+    "reload-builtin",
+    "round-builtin",
+    "setslice-method",
+    "signature-differs",
+    "standarderror-builtin",
+    "suppressed-message",
+    "sys-max-int",
+    "trailing-newlines",
+    "unichr-builtin",
+    "unicode-builtin",
+    "unnecessary-pass",
+    "unpacking-in-except",
+    "useless-else-on-loop",
+    "useless-suppression",
+    "using-cmp-argument",
+    "wrong-import-order",
+    "xrange-builtin",
+    "zip-builtin-not-iterating",
+    "missing-docstring",  # added C0111
+    "invalid-name",  # added C0103
+    "too-few-public-methods",  # added R0903
+    "line-too-long",  # added C0301
+    "wrong-import-position",  # added C0413
+    "redefined-outer-name",  # added W0621
+    "broad-exception-raised",  # added W0718
+    "broad-except",  # added W0719
+    "logging-fstring-interpolation",  # added W1203
+    "unnecessary-pass",  # added W3101
+    "too-many-instance-attributes",  # added R0902
+    "too-many-arguments",  # added R0913
+    "too-many-locals",  # added R0914
+    "possibly-used-before-assignment"  # added E0606
+]
